@@ -14,3 +14,5 @@ export class App {
   isAdmin: boolean = true;
   isLoggedIn: boolean = true;
 }
+
+//json stringify, json parse, local storage, session storage, cookies

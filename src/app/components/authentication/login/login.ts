@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Auth } from '../../../services/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,16 @@ import { Component } from '@angular/core';
   styleUrl: './login.css',
 })
 export class Login {
-  isLoggedIn: boolean = false;
+  private readonly authService: Auth = inject(Auth);
+  private readonly router: Router = inject(Router);
 
-  
+  login(): void{
+    this.authService.login();
+    this.router.navigate(['/']);
+  }
+
+  logout(): void{
+    this.authService.logout();
+  }
+
 }

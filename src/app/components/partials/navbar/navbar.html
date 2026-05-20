@@ -37,10 +37,14 @@
           Profil
         </a>
 
-        @if(isLoggedInAttribute()){
+        @if(!isLoggedInAttribute){
             <a class="nav-link active" href="/login">
                 Connexion
             </a>
+        } @else {
+            <button class="nav-link active" (click)="logout()">
+                Déconnexion
+            </button>
         }
 
         @if(isAdminAttribute()){
