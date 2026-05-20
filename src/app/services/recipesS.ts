@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RecipesS {
-  private readonly apiUrl = 'https://dummyjson.com/recipes';
-
   private readonly http = inject(HttpClient);
 
-  getRecipes() {
-    return this.http.get<RecipesResponse>(this.apiUrl);
+  getRecipes(): Observable<RecipesResponse> {
+    return this.http.get<RecipesResponse>(environment.apiRecipesUrl);
   }
 }

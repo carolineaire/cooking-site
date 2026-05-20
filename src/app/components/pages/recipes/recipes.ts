@@ -12,8 +12,13 @@ export class Recipes implements OnInit {
   private readonly recipesService = inject(RecipesS);
 
   ngOnInit(): void {
-    this.recipesService.getRecipes().subscribe((data) => {
-      this.recipes = data.recipes;
+    this.recipesService.getRecipes().subscribe({
+      next: (response) => {
+        this.recipes = response.recipes;
+      },
+      error: (error) => {
+        console.error('Error fetching recipes:', error);
+      }
     });
   }
 }
