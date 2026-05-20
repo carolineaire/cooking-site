@@ -37,15 +37,17 @@
           Profil
         </a>
 
-        <a class="nav-link active" href="/login">
-          Connexion
-        </a>
+        @if(isLoggedInAttribute()){
+            <a class="nav-link active" href="/login">
+                Connexion
+            </a>
+        }
 
-        <!-- @if(isLoggedInAttribut){ -->
+        @if(isAdminAttribute()){
           <a class="nav-link" href="/admin">
             Admin
           </a>
-        <!-- } -->
+        }
         
       </div>
     </div>

@@ -11,4 +11,6 @@ import { Footer } from "./components/partials/footer/footer";
 })
 export class App {
   protected readonly title = signal('cooking-site');
+  isAdmin: boolean = true;
+  isLoggedIn: boolean = true;
 }
