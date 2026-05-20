@@ -1,1 +1,16 @@
 <p>recipes works!</p>
+<p>{{ recipes.length }} recipes found.</p>
+
+<div class="row g-3">
+  @for (recipe of recipes; track recipe.id) {
+    <div class="col-md-3">
+      <div class="card h-100 p-3">
+        <h3>{{ recipe.name }}</h3>
+        <p>Prep Time: {{ recipe.prepTimeMinutes }} minutes</p>
+        <p>Cook Time: {{ recipe.cookTimeMinutes }} minutes</p>
+        <p>Servings: {{ recipe.servings }}</p>
+        <p>Difficulty: {{ recipe.difficulty }}</p>
+      </div>
+    </div>
+  }
+</div>
