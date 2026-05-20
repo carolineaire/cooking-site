@@ -1,1 +1,38 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg elegant-navbar mb-5">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fw-semibold" href="#">
+      TODO-APP
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="navbar-nav ms-auto align-items-center gap-2">
+
+        <a class="nav-link active" href="/">
+          Home
+        </a>
+
+        <!-- @if(isLoggedInAttribut){ -->
+          <a class="nav-link" href="/admin">
+            Admin
+          </a>
+        <!-- } -->
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
