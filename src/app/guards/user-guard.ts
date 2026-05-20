@@ -1,10 +1,12 @@
 import { inject } from '@angular/core';
 import { CanActivateChildFn, Router } from '@angular/router';
+import { Auth } from '../services/auth';
 
 export const userGuard: CanActivateChildFn = (childRoute, state) => {
   const router: Router = inject(Router)
+  const authService = inject(Auth)
   // Simulation de controle Auth
-  const isAuth: boolean = false
+  const isAuth: boolean = authService.getCurrentStatus();
 
   if (isAuth) {
     return true

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-user-profil',
@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './user-profil.html',
   styleUrl: './user-profil.css',
 })
-export class UserProfil {}
+export class UserProfil {
+}
